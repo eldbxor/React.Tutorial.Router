@@ -1,6 +1,7 @@
 import { Route, Routes, Link } from "react-router-dom";
 import About from "./About";
 import Home from "./Home";
+import Profile from "./Profile";
 
 const App = () => {
   return (
@@ -12,11 +13,18 @@ const App = () => {
         <li>
           <Link to="/about">소개</Link>
         </li>
+        <li>
+          <Link to="/profile/yootaek">yootaek 프로필</Link>
+        </li>
+        <li>
+          <Link to="/profile/gildong">gildong 프로필</Link>
+        </li>
       </ul>
       <hr />
       <Routes>
         <Route path="/" element={<Home />} exact={true} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile/:username" element={<Profile />} />
       </Routes>
     </div>
   );
