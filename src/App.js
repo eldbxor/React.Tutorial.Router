@@ -28,6 +28,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/profiles/*" element={<Profiles />} />
         <Route path="/navigate" element={<NavigateSample />} />
+        <Route path="/*" element={<h1>존재하지 않는 페이지입니다.</h1>} />
       </Routes>
     </div>
   );
